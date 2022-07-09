@@ -1,7 +1,7 @@
 import Color from 'assets/color';
 import Images from 'assets/images';
 import React, { useEffect, useState } from 'react';
-import { Animated, Image, Pressable, StatusBar, StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
+import { Alert, Animated, Image, Pressable, StatusBar, StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { deleteCard, duplicateCard, shareCard } from 'state/card/actions';
 import { Card } from 'state/types';
@@ -48,7 +48,19 @@ function CardOptions(props:CardOptionsProps){
         props.onClose();
     }
     const remove = () => {
-        dispatch(deleteCard(props.card.id));
+        Alert.alert('Confirm delete', 'This will delete Food Style and all its settings', [
+            {
+                onPress: () => {
+                    dispatch(deleteCard(props.card.id));
+                },
+                style: 'destructive',
+                text: 'Delete'
+            },
+            {
+                text: 'Cancel'
+            }
+        ])
+        
         props.onClose();
     }
     return <View style={[styles.container, props.style]}>
