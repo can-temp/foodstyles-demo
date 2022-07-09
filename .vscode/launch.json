@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "trace": true,
+    "configurations": [
+        {
+            "name": "Attach to packager",
+            "cwd": "${workspaceFolder}",
+            "type": "reactnative",
+            "request": "attach",
+            "sourceMaps": true
+        }
+    ]
+}

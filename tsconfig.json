@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "moduleResolution": "node",
+      "allowJs": true,
+      "noEmit": true,
+      "strict": true,
+      "strictNullChecks": true,
+      "isolatedModules": true,
+      "esModuleInterop": true,
+      "baseUrl": "./src",
+      "jsx": "react-native",
+      "sourceMap": true,
+      "outDir": "build",
+      "module": "commonjs",
+      "useUnknownInCatchVariables": false,
+      "noImplicitAny": false
+    }
+  }
